@@ -1,13 +1,16 @@
 import React from 'react';
-import './Card.css';
+import './Card.sass';
 
-const DisplayCard = () => {
+const Card = () => {
     return(
-        <div>
-            <img src="bulba.png" alt="pokemon"/>
+        <div className="Card">
+            <div className="spriteContainer">
+                <img className="Sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="pokemon"/>
+            </div>
+
             <h2>Bulbasaur</h2>
             <p>Type: poison/grass</p>
-            <p>Stats:</p>
+            <h4>Stats:</h4>
             <ul>
                 <li>Speed: 45</li>
                 <li>Special Defense: 65</li>
@@ -19,3 +22,5 @@ const DisplayCard = () => {
         </div>
     );
 }
+
+export default Card

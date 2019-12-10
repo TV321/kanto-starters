@@ -1,10 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.sass';
+import Card from './Card';
+import Head from './Head';
 
 function App() {
   return (
-    
+      <React.Fragment>
+            <Head />
+            <div className="container">
+                <Card />
+                <Card />
+                <Card />
+            </div>
+
+      </React.Fragment>
   );
 }
 
