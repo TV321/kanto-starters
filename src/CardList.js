@@ -2,12 +2,18 @@ import React from 'react';
 import Card from './Card';
 
 
-const CardList = () =>{
+const CardList = ( props ) =>{
+    const pokemonList = props.starters.map((pok, index) => {
+        return <Card
+                    key= { index }
+                    name={ pok.name }
+                    url={ pok.url }
+                />
+    })
     return(
+
         <React.Fragment>
-            <Card />
-            <Card />
-            <Card />
+            { pokemonList }
         </React.Fragment>
     );
 }

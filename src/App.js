@@ -34,7 +34,7 @@ class App extends Component {
             <React.Fragment>
                   <Head />
                   <div className="container">
-                      <CardList />
+                      <CardList starters={ starters } />
                   </div>
             </React.Fragment>
         );

@@ -1,14 +1,14 @@
 import React from 'react';
 import './Card.sass';
 
-const Card = () => {
+const Card = ( props ) => {
     return(
         <div className="Card">
             <div className="spriteContainer">
                 <img className="Sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="pokemon"/>
             </div>
 
-            <h2>Bulbasaur</h2>
+            <h2>{ props.name }</h2>
             <p>Type: poison/grass</p>
             <h4>Stats:</h4>
             <ul>
