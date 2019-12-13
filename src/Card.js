@@ -5,7 +5,8 @@ const Card = ( props ) => {
     return(
         <div className="Card">
             <div className="spriteContainer">
-                <img className="Sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="pokemon"/>
+                <img className="Sprite" src={ props.url } alt="pokemon"/>
+                {/* <img className="Sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="pokemon"/> */}
             </div>
 
             <h2>{ props.name }</h2>
@@ -18,6 +19,7 @@ const Card = ( props ) => {
                 <li>Defense: 49</li>
                 <li>Attack: 49</li>
                 <li>HP: 45</li>
+                <li>{ props.url }</li>
             </ul>
         </div>
     );
