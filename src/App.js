@@ -6,7 +6,8 @@ import CardList from './CardList';
 class App extends Component {
 
     state = {
-        pokemons: []
+        pokemons: [],
+        urls: []
     }
 
     componentDidMount() {
@@ -17,7 +18,9 @@ class App extends Component {
             })
     }
 
+
     render() {
+
         const { pokemons } = this.state;
         const starters = pokemons.filter(poke => {
             if(poke.name === "bulbasaur" || poke.name === "charmander" ||
@@ -28,13 +31,15 @@ class App extends Component {
             }
 
         })
-        console.log(starters)
+        const urlList = starters.map(pok => {
+            return pok.url
+        })
         return (
 
             <React.Fragment>
                   <Head />
                   <div className="container">
-                      <CardList starters={ starters } />
+                      <CardList starters={ starters } urls={ urlList } />
                   </div>
             </React.Fragment>
         );
