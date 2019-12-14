@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/kanto-starters/static/css/main.65c83721.chunk.css",
+    "main.js": "/kanto-starters/static/js/main.7b26277d.chunk.js",
+    "main.js.map": "/kanto-starters/static/js/main.7b26277d.chunk.js.map",
+    "runtime-main.js": "/kanto-starters/static/js/runtime-main.a75a3b3c.js",
+    "runtime-main.js.map": "/kanto-starters/static/js/runtime-main.a75a3b3c.js.map",
+    "static/js/2.27729ffd.chunk.js": "/kanto-starters/static/js/2.27729ffd.chunk.js",
+    "static/js/2.27729ffd.chunk.js.map": "/kanto-starters/static/js/2.27729ffd.chunk.js.map",
+    "index.html": "/kanto-starters/index.html",
+    "precache-manifest.8d1bf2ac1c6bd74b4b5cc63b798041e1.js": "/kanto-starters/precache-manifest.8d1bf2ac1c6bd74b4b5cc63b798041e1.js",
+    "service-worker.js": "/kanto-starters/service-worker.js",
+    "static/css/main.65c83721.chunk.css.map": "/kanto-starters/static/css/main.65c83721.chunk.css.map",
+    "static/js/2.27729ffd.chunk.js.LICENSE": "/kanto-starters/static/js/2.27729ffd.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a75a3b3c.js",
+    "static/js/2.27729ffd.chunk.js",
+    "static/css/main.65c83721.chunk.css",
+    "static/js/main.7b26277d.chunk.js"
+  ]
+}
