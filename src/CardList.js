@@ -40,34 +40,36 @@ class CardList extends Component {
 
         }
 
-        if (this.state.stats.length > 2) {
-            console.log(this.state.stats[0][1]);
-        }
-        // console.log(this.state.stats)
+        // if (this.state.stats.length > 2) {
+        //     console.log(this.state.stats[0][1]);
+        // }
+        //  console.log(this.state.stats)
     }
 
 
     render() {
         const pokemonList = this.props.starters.map((pok, index) => {
-            return <Card
-                        key= { index }
-                        name={ pok.name }
-                        url={ this.state.urls[index] }
-                        type={ this.state.types[index] }
-                        sta={ this.state.stats[index]}
+            if (this.state.stats.length > 2) {
+                return <Card
+                            key= { index }
+                            name={ pok.name }
+                            url={ this.state.urls[index] }
+                            type={ this.state.types[index] }
+                            stat={ this.state.stats[index]}
+                        />
+            } else {
+                return null
+            }
 
-                    />
         })
 
         return(
 
-            <React.Fragment>
-                { pokemonList }
-            </React.Fragment>
+                <React.Fragment>
+                    { pokemonList }
+                </React.Fragment>
         );
     }
-
 }
-
 
 export default CardList

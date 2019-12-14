@@ -1,6 +1,9 @@
 import React from 'react';
 import './Card.sass';
 
+
+
+
 const Card = ( props ) => {
 
     return(
@@ -14,12 +17,12 @@ const Card = ( props ) => {
             <p>Type: { props.type }</p>
             <h4>Stats:</h4>
             <ul>
-                <li>Speed: { props.sta }</li>
-                <li>Special Defense: </li>
-                <li>Special Attack: </li>
-                <li>Defense: </li>
-                <li>Attack: </li>
-                <li>HP: </li>
+                <li>Speed: { props.stat[0] }</li>
+                <li>Special Defense: { props.stat[1] }</li>
+                <li>Special Attack: { props.stat[2] }</li>
+                <li>Defense: { props.stat[3] }</li>
+                <li>Attack: { props.stat[4] }</li>
+                <li>HP: { props.stat[5] }</li>
                 {/* <li>{ props.url }</li> */}
             </ul>
         </div>
