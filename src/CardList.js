@@ -6,12 +6,14 @@ import Card from './Card';
 class CardList extends Component {
 
     state = {
-        urls: []
+        urls: [],
+        types: [],
+        stats: []
     }
     componentDidUpdate(prevProps, prevState){
         if(prevProps.urls !== this.props.urls) {
-
             const urls = this.props.urls
+
             Promise.all(urls.map((url, index) =>{
                 return fetch(url).then(resp => resp.json())
                 .then(response => {
@@ -19,40 +21,40 @@ class CardList extends Component {
                         urls: [
                             ...prevState.urls,
                             response.sprites.front_default
+                        ],
+                        types: [
+                            ...prevState.types,
+                            response.types.map(slot =>{
+                                return slot.type.name + " "
+                            })
+                        ],
+                        stats: [
+                            ...prevState.stats,
+                            response.stats.map((stat, i) =>{
+                                return (stat.base_stat + " ")
+                            })
                         ]
                     }));
                 })
             }))
 
         }
-        console.log(this.state.urls)
+
+        if (this.state.stats.length > 2) {
+            console.log(this.state.stats[0][1]);
+        }
+        // console.log(this.state.stats)
     }
 
-    //
-    //
-    //
-    // const prom = Promise.all(urlList.map((url, index) =>{
-    //     return fetch(url).then(resp => resp.json())
-    //     .then(response => {
-    //           return response.sprites.front_default
-    //     })
-    // }))
-    //
-    // let eee = []
-    // prom
-    //     .then((result) =>{
-    //         eee.push(result[0])
-    //         eee.push(result[1])
-    //         eee.push(result[2])
-    //     }).then(() =>{
-    //         console.log(eee)
-    //     })
+
     render() {
         const pokemonList = this.props.starters.map((pok, index) => {
             return <Card
                         key= { index }
                         name={ pok.name }
-                        // url={  }
+                        url={ this.state.urls[index] }
+                        type={ this.state.types[index] }
+                        sta={ this.state.stats[index]}
 
                     />
         })

@@ -6,8 +6,7 @@ import CardList from './CardList';
 class App extends Component {
 
     state = {
-        pokemons: [],
-        urls: []
+        pokemons: []
     }
 
     componentDidMount() {

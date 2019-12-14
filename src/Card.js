@@ -2,6 +2,7 @@ import React from 'react';
 import './Card.sass';
 
 const Card = ( props ) => {
+
     return(
         <div className="Card">
             <div className="spriteContainer">
@@ -10,16 +11,16 @@ const Card = ( props ) => {
             </div>
 
             <h2>{ props.name }</h2>
-            <p>Type: poison/grass</p>
+            <p>Type: { props.type }</p>
             <h4>Stats:</h4>
             <ul>
-                <li>Speed: 45</li>
-                <li>Special Defense: 65</li>
-                <li>Special Attack: 65</li>
-                <li>Defense: 49</li>
-                <li>Attack: 49</li>
-                <li>HP: 45</li>
-                <li>{ props.url }</li>
+                <li>Speed: { props.sta }</li>
+                <li>Special Defense: </li>
+                <li>Special Attack: </li>
+                <li>Defense: </li>
+                <li>Attack: </li>
+                <li>HP: </li>
+                {/* <li>{ props.url }</li> */}
             </ul>
         </div>
     );
